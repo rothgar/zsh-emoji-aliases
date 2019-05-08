@@ -1,5 +1,7 @@
 Get Slack style emoji in your terminal! :heart: :+1:
 
+![demo](img/demo.gif)
+
 Source the alias file one time
 
 ```bash
