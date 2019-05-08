@@ -9,10 +9,3 @@ echo -e $(echo "${JSON_DATA}" \
 	| tr ',' '\n'                                                      `# wrapped echo removes newlines` \
 	| sed -e 's/^[ \t]*//'                                             `# remove leading space` \
 	> emoji.zsh
-
-echo -e $(echo "${JSON_DATA}" \
-	| jq -r -M '.[] | "alias :\(.short_name):=\"\\U\(.unified)\","' `# add an extra , for newline` \
-	| sed -r 's/-([0-9A-Z]{3,5})/\\U\1/g')												  `# handle emoji variants` \
-	| tr ',' '\n'                                                   `# wrapped echo removes newlines` \
-	| sed -e 's/^[ \t]*//'                                          `# remove leading space` \
-	> emoji.bash
