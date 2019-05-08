@@ -10,8 +10,8 @@ Or download the file and source it every time you start a shell
 
 ```bash
 wget -O $HOME/.local/share/emoji.aliases \
-    https://raw.githubusercontent.com/rothgar/emoji-aliases/master/emoji.aliases
-echo ". $HOME/.local/share/emoji.aliases" >> $(echo $HOME/.$(basename $SHELL)rc)
+    https://raw.githubusercontent.com/rothgar/emoji-aliases/master/emoji.zsh
+echo ". $HOME/.local/share/emoji.zsh" >> $(echo ${ZDOTDIR:-$HOME}/.zshrc)
 ```
 
 Generate an emoji.aliases file
